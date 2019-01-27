@@ -60,7 +60,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('revSrc', () => {
-  return gulp.src(['./src/**', '!./src/lib/**'])
+  return gulp.src(['./src/**', '!./src/lib/**', '!./src/**/*.less'])
     .pipe(revAll.revision({
       dontRenameFile: [/favicon.ico/g, /index.html/g, /abort.html/g, /contact.html/g, /shops.html/g],
       transformFilename: (file, hash) => {

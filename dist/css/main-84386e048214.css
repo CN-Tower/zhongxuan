@@ -1,0 +1,142 @@
+.page-wrap {
+  min-width: 960px;
+}
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background: rgba(0, 0, 0, 0.3);
+}
+header .navbar {
+  padding-bottom: 0;
+}
+header .navbar .navbar-brand {
+  height: 88px;
+  margin: 0;
+  padding: 0;
+  margin-top: -12px;
+}
+header .navbar .navbar-brand img {
+  height: 100%;
+  width: 170px;
+}
+header .navbar .navbar-nav {
+  margin-left: 80px;
+  padding-top: 34px;
+}
+header .navbar .navbar-nav .nav-item {
+  margin-right: 40px;
+}
+header .navbar .navbar-nav .nav-item a {
+  color: #fff !important;
+  font-weight: 600;
+}
+header .navbar .navbar-nav .nav-item.active a {
+  color: #007bff !important;
+}
+section {
+  min-height: 400px;
+}
+#home .zx-btn {
+  width: 100px;
+  position: absolute;
+  cursor: pointer;
+}
+#home .sec-01 {
+  background: url('../img/home/bg_01-58f5fca8b670.png');
+  background-size: cover;
+}
+#home .sec-01 .container {
+  height: 100%;
+  position: relative;
+}
+#home .sec-01 .container .txt_01_01 {
+  width: 522px;
+  position: absolute;
+  top: 215px;
+  left: 70px;
+}
+#home .sec-01 .container .txt_01_02 {
+  width: 450px;
+  position: absolute;
+  top: 415px;
+  left: 70px;
+}
+#home .sec-01 .container .btn_01 {
+  width: 100px;
+  position: absolute;
+  cursor: pointer;
+  top: 490px;
+  left: 70px;
+}
+#home .sec-01 .container .pic_01_01 {
+  position: absolute;
+  width: 650px;
+  right: 0;
+  bottom: 0;
+}
+#home .sec-02 {
+  height: 690px;
+  background: #000;
+}
+#home .sec-02 .sub-sec-wp {
+  padding: 0;
+  padding-top: 60px;
+}
+#home .sec-02 .sub-sec-wp .sub-sec.sub-sec-01 {
+  width: 670px;
+  height: 560px;
+  margin-right: 12px;
+  background: url('../img/home/pic_02_01-eb9995cf17f0.png') no-repeat;
+  background-size: cover;
+}
+#home .sec-02 .sub-sec-wp .sub-sec.sub-sec-02 {
+  width: 448px;
+  height: 274px;
+  margin-bottom: 12px;
+  background: url('../img/home/pic_02_01-eb9995cf17f0.png') no-repeat;
+  background-size: cover;
+}
+#home .sec-02 .sub-sec-wp .sub-sec.sub-sec-03 {
+  width: 448px;
+  height: 274px;
+  background: url('../img/home/pic_02_01-eb9995cf17f0.png') no-repeat;
+  background-size: cover;
+}
+#home .sec-03 {
+  background: #000;
+}
+#home .sec-03 .pic_03 {
+  height: 510px;
+  background: url('../img/home/pic_03_01-0c584fccdfa6.png') no-repeat;
+  background-size: cover;
+}
+#home .sec-04 {
+  background: #000;
+}
+#home .sec-04 .sec-04-wp {
+  height: 980px;
+  background: url('../img/home/sec_04-56342f0ef739.png') no-repeat;
+  background-size: cover;
+}
+footer {
+  height: 180px;
+  background: #000;
+  overflow: hidden;
+  color: #6c757d;
+}
+footer hr {
+  height: 3px;
+  background: #188dca;
+}
+footer div.clearfix .footer-menu {
+  float: right;
+  list-style: none;
+}
+footer div.clearfix .footer-menu li {
+  float: left;
+  margin-left: 10px;
+}

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/CN-Tower/zhongxuan#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "funclib": "^3.2.2",
     "gulp-less": "^4.0.1",
     "less-plugin-autoprefix": "^2.0.0"
