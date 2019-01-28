@@ -66,17 +66,26 @@ header {
     }
   }
 }
+.bg-hover {
+  overflow: hidden;
+}
+
 section {
   min-height: 400px;
+  background: #000;
 }
+
 #home {
   .zx-btn {
     width: 100px;
     position: absolute;
     cursor: pointer;
+    &:hover {
+      margin-left: 2px;
+    }
   }
   .sec-01 {
-    background: url('../img/home/bg_01.png');
+    background: url('../img/home/bg_01.jpg');
     background-size: cover;
     .container {
       height: 100%;
@@ -93,8 +102,7 @@ section {
         top: 415px;
         left: 70px;
       }
-      .btn_01 {
-        .zx-btn;
+      .zx-btn {
         top: 490px;
         left: 70px;
       }
@@ -108,51 +116,155 @@ section {
   }
   .sec-02 {
     height: 690px;
-    background: #000;
     .sub-sec-wp{
       padding: 0;
       padding-top: 60px;
       .sub-sec {
-        &.sub-sec-01 {
+        position: relative;
+        overflow: hidden;
+        .bg-hover-img {
+          width: 100%;
+          height: 101%;
+        }
+        &:nth-child(1) {
           width: 670px;
           height: 560px;
           margin-right: 12px;
-          background: url('../img/home/pic_02_01.png') no-repeat;
-          background-size: cover;
+          .txt_02_01 {
+            width: 318px;
+            position: absolute;
+            top: 200px;
+            left: 90px;
+          }
+          .zx-btn {
+            top: 420px;
+            left: 90px;
+          }
         }
-        &.sub-sec-02 {
+        &:nth-child(2) {
           width: 448px;
           height: 274px;
           margin-bottom: 12px;
-          background: url('../img/home/pic_02_01.png') no-repeat;
-          background-size: cover;
+          .txt_02_02 {
+            width: 268px;
+            position: absolute;
+            top: 58px;
+            left: 40px;
+          }
+          .zx-btn {
+            top: 190px;
+            left: 40px;
+          }
         }
-        &.sub-sec-03 {
+        &:nth-child(3) {
           width: 448px;
           height: 274px;
-          background: url('../img/home/pic_02_01.png') no-repeat;
-          background-size: cover;
+          .txt_02_03 {
+            width: 198px;
+            position: absolute;
+            top: 70px;
+            left: 40px;
+          }
+          .zx-btn {
+            top: 168px;
+            left: 40px;
+          }
         }
       }
     }
   }
   .sec-03 {
-    background: #000;
     .pic_03{
       height: 510px;
-      background: url('../img/home/pic_03_01.png') no-repeat;
+      background: url('../img/home/pic_03_01.jpg') no-repeat;
       background-size: cover;
+      padding-top: 120px;
+      position: relative;
+      .txt_03_01{
+        width: 610px;
+      }
+      .zx-btn {
+        top: 380px;
+        left: 510px;
+      }
     }
   }
   .sec-04 {
-    background: #000;
     .sec-04-wp {
       height: 980px;
-      background: url('../img/home/sec_04.png') no-repeat;
+      background: url('../img/home/sec_04.jpg') no-repeat;
       background-size: cover;
+      position: relative;
+      .btn-01 {
+        top: 800px;
+        left: 250px;
+      }
+      .btn-02 {
+        top: 800px;
+        left: 788px;
+      }
     }
   }
 }
+
+#abort {
+  .sec-01 {
+    background: url('../img/abort/bg_01.jpg');
+    background-size: cover;
+    .container {
+      height: 100%;
+      position: relative;
+      .txt_01_01 {
+        width: 580px;
+        position: absolute;
+        top: 226px;
+        left: 0;
+      }
+      .pic_01_01 {
+        width: 700px;
+        position: absolute;
+        bottom: 10px;
+        left: 420px;
+      }
+    }
+  }
+  .sec-02 {
+    .container {
+      .bg_sec {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#contact {
+  .sec-01 {
+    background: url('../img/contact/bg_01.jpg');
+    background-size: cover;
+  }
+  .sec-02 {
+    .container {
+      .bg_sec {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#shops {
+  .sec-01 {
+    background: url('../img/shops/bg_01.jpg');
+    background-size: cover;
+  }
+  .sec-02 {
+    .container {
+      .bg_sec {
+        width: 100%;
+      }
+    }
+  }
+}
+
 footer {
   height: 180px;
   background: #000;

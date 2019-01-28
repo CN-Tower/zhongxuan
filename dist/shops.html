@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>仲旋电子科技有限公司</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="target-densitydpi=device-dpi" />
+  <meta name="HandheldFriendly" content="true" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./lib/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/main-3a23c9dc678f.css" />
+</head>
+
+<body>
+  <style type="text/css">
+    #browser-hint {
+      display: none;
+      text-align: center;
+      width: 100%;
+      height: 400px;
+      margin-top: 80px;
+    }
+
+    #browser-hint a {
+      text-decoration: none;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    #browser-hint img {
+      border: none;
+    }
+  </style>
+  <div id="browser-hint">
+    <div class="link-img">
+      <a href="http://www.google.cn/chrome/browser/">
+        <img src="./img/chrome-c30b4c7c35b8.png" />
+      </a>
+      <a href="https://www.mozilla.org/en-US/firefox/products/?v=b">
+        <img src="./img/firefox-bd58bacbb89e.png" />
+      </a>
+    </div>
+    <div class="hint-msg">
+      <p>您好，当前的浏览器不支持本网站，请使用谷歌或火狐浏览器打开网站！</p>
+      <p>Hi, the current browsers do not support ZJSON<br>
+        please use the Chrome or Firefox browser to open the website!</p>
+    </div>
+  </div>
+  <div id="page-wrap">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container page-wrap">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./img/home/log-df3b3e8ed193.png" width="30" height="30" alt="">
+          </a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./abort.html">关于仲旋</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./shops.html">门店展示</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">联系我们</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">线上商城</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="shops" class="sections">
+      <section class="sec-01">
+        <div class="container">
+
+        </div>
+      </section>
+      <section class="sec-02">
+        <div class="container">
+          <img class="bg_sec" src="./img/shops/bg_sec-376e91c2ae9b.jpg">
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <hr>
+        <div class="clearfix">
+          <p class="float-left">Copyright@2018 Zhongxuan Inc.保留所有版权</p>
+          <ul class="footer-menu">
+            <li>隐私政策</li>
+            <li>使用条款</li>
+            <li>销售政策</li>
+            <li>法律信息</li>
+            <li>网站地图</li>
+          </ul>
+        </div>
+        <p>沪公安网备案 11020502308976 沪icp备10243630 营业执照</p>
+      </div>
+    </footer>
+
+  </div>
+  <script>
+    var userAgent = navigator.userAgent;
+    var isFirefox = userAgent.indexOf("Firefox") > -1;
+    var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1;
+    var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1;
+    if (!(isFirefox || isChrome || isSafari)) {
+      document.getElementById('browser-hint').style.display = 'block';
+      document.getElementById('page-wrap').style.display = 'none';
+    }
+  </script>
+  <script type="text/javascript" src="./lib/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/main-cc05b384d256.js"></script>
+</body>
+
+</html>

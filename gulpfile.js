@@ -6,6 +6,7 @@ const gulp = require('gulp'),
   clean = require('gulp-clean'),
   fn = require('funclib'),
   less = require('gulp-less'),
+  imagemin = require('gulp-imagemin'),
   LessAutoprefix = require('less-plugin-autoprefix'),
   path = require('path');
 
@@ -59,12 +60,24 @@ gulp.task('clean', () => {
   return gulp.src('./dist').pipe(clean());
 });
 
+gulp.task('imgMin', function () {
+  gulp.src('./src/img/**')
+      .pipe(imagemin({
+          optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
+          progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+          interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+          multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
+      }))
+      .pipe(gulp.dest('./src/img'));
+});
+
 gulp.task('revSrc', () => {
+  const excludeFiles = [/favicon.ico/mg, /index.html/mg, /abort.html/mg, /contact.html/mg, /shops.html/mg];
   return gulp.src(['./src/**', '!./src/lib/**', '!./src/**/*.less'])
     .pipe(revAll.revision({
-      dontRenameFile: [/favicon.ico/g, /index.html/g, /abort.html/g, /contact.html/g, /shops.html/g],
+      dontRenameFile: excludeFiles,
       transformFilename: (file, hash) => {
-        if (['index.html', 'favicon.ico'].some(fl => fn.contains(file.path, fl))) {
+        if (excludeFiles.some(fl => fn.contains(file.path, fl.source))) {
           return path.basename(file.path);
         }
         const ext = path.extname(file.path);
