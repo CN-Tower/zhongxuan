@@ -126,7 +126,7 @@ header .navbar .navbar-nav .nav-item.active a {
 /* home
 -----------------------------------------------------------------*/
 #home .sec-01 {
-  background: url('../img/home/bg_01.jpg');
+  background: url('../img/home/bg_01-358ab3d0ed83.jpg');
   background-size: cover;
 }
 #home .sec-01 .container {
@@ -247,7 +247,7 @@ header .navbar .navbar-nav .nav-item.active a {
 /* abort
 -----------------------------------------------------------------*/
 #abort .sec-01 {
-  background: url('../img/abort/bg_01.jpg');
+  background: url('../img/abort/bg_01-e4570a4052fc.jpg');
   background-size: cover;
 }
 #abort .sec-01 .container {
@@ -307,7 +307,7 @@ header .navbar .navbar-nav .nav-item.active a {
 /* contact
 -----------------------------------------------------------------*/
 #contact .sec-01 {
-  background: url('../img/contact/bg_01.jpg');
+  background: url('../img/contact/bg_01-9dbbe785e68a.jpg');
   background-size: cover;
   position: relative;
 }
@@ -328,7 +328,7 @@ header .navbar .navbar-nav .nav-item.active a {
 }
 #contact .sec-02 .container .contact_detail {
   height: 440px;
-  background: url('../img/contact/detail_bg.png');
+  background: url('../img/contact/detail_bg-defc8aec0997.png');
   background-size: cover;
   position: relative;
   text-align: center;
@@ -346,7 +346,7 @@ header .navbar .navbar-nav .nav-item.active a {
 /* shops
 -----------------------------------------------------------------*/
 #shops .sec-01 {
-  background: url('../img/shops/bg_01.jpg');
+  background: url('../img/shops/bg_01-8c27b6a44bdc.jpg');
   background-size: cover;
 }
 #shops .sec-01 .container {
@@ -369,7 +369,7 @@ header .navbar .navbar-nav .nav-item.active a {
 }
 #shops .sec-03 .container {
   height: 4152px;
-  background: url('../img/shops/bg_sec.jpg');
+  background: url('../img/shops/bg_sec-416b881ab229.jpg');
   background-size: 100%;
   position: relative;
 }

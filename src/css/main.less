@@ -25,10 +25,87 @@
 @breakpoint-lg: 992px;
 @breakpoint-xl: 1200px;
 
+/* common
+-----------------------------------------------------------------*/
+html, body {
+  background: #000;
+}
+
+.container {
+  padding: 0;
+}
+
+section {
+  min-height: 400px;
+}
+
 .page-wrap {
   min-width: 960px;
 }
 
+.bg-hover {
+  overflow: hidden;
+  img.bg-hover-img {
+    width: 100%;
+    height: 101%;
+  }
+}
+
+.p-center {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.branchs_nav_wp {
+  margin-top: 38px;
+  .branchs_nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    li {
+      width: 25%;
+      padding-right: 20px;
+      position: relative;
+      cursor: pointer;
+      .menu_txt {
+        height: 22px;
+      }
+      .undeline {
+        width: 90%;
+        position: absolute;
+        left: 0;
+        bottom: -18px;
+        display: none;
+      }
+      &.active .undeline {
+        display: block;
+      }
+    }
+  }
+  .menu_hr {
+    background: #ddd;
+  }
+}
+
+.zx-btn {
+  width: 100px;
+  position: absolute;
+  cursor: pointer;
+  &:hover {
+    margin-left: 2px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    min-width: 1140px !important;
+  }
+}
+/* header
+-----------------------------------------------------------------*/
 header {
   position: fixed;
   z-index: 999;
@@ -62,28 +139,19 @@ header {
           color: @primary !important;
         }
       }
-
+    }
+    @media (min-width: 576px) {
+      .navbar-nav {
+        flex-direction: row!important;
+        margin-top: 0!important;
+      }
     }
   }
 }
-.bg-hover {
-  overflow: hidden;
-}
 
-section {
-  min-height: 400px;
-  background: #000;
-}
-
+/* home
+-----------------------------------------------------------------*/
 #home {
-  .zx-btn {
-    width: 100px;
-    position: absolute;
-    cursor: pointer;
-    &:hover {
-      margin-left: 2px;
-    }
-  }
   .sec-01 {
     background: url('../img/home/bg_01.jpg');
     background-size: cover;
@@ -122,10 +190,10 @@ section {
       .sub-sec {
         position: relative;
         overflow: hidden;
-        .bg-hover-img {
-          width: 100%;
-          height: 101%;
-        }
+      }
+      & > .sub-sec {
+        position: relative;
+        overflow: hidden;
         &:nth-child(1) {
           width: 670px;
           height: 560px;
@@ -141,7 +209,9 @@ section {
             left: 90px;
           }
         }
-        &:nth-child(2) {
+      }
+      .sub-sec-rt .sub-sec {
+        &:nth-child(1) {
           width: 448px;
           height: 274px;
           margin-bottom: 12px;
@@ -156,7 +226,7 @@ section {
             left: 40px;
           }
         }
-        &:nth-child(3) {
+        &:nth-child(2) {
           width: 448px;
           height: 274px;
           .txt_02_03 {
@@ -175,13 +245,15 @@ section {
   }
   .sec-03 {
     .pic_03{
-      height: 510px;
-      background: url('../img/home/pic_03_01.jpg') no-repeat;
-      background-size: cover;
-      padding-top: 120px;
       position: relative;
+      .pic_03_01 {
+        width: 100%;
+      }
       .txt_03_01{
         width: 610px;
+        position: absolute;
+        left: 245px;
+        top: 106px;
       }
       .zx-btn {
         top: 380px;
@@ -191,22 +263,23 @@ section {
   }
   .sec-04 {
     .sec-04-wp {
-      height: 980px;
-      background: url('../img/home/sec_04.jpg') no-repeat;
-      background-size: cover;
+      .pic_04_01 {
+        width: 100%;
+      }
       position: relative;
       .btn-01 {
-        top: 800px;
-        left: 250px;
+        top: 810px;
+        left: 226px;
       }
       .btn-02 {
-        top: 800px;
-        left: 788px;
+        top: 810px;
+        left: 828px;
       }
     }
   }
 }
-
+/* abort
+-----------------------------------------------------------------*/
 #abort {
   .sec-01 {
     background: url('../img/abort/bg_01.jpg');
@@ -217,32 +290,90 @@ section {
       .txt_01_01 {
         width: 580px;
         position: absolute;
-        top: 226px;
+        top: 220px;
         left: 0;
       }
       .pic_01_01 {
         width: 700px;
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
         left: 420px;
       }
     }
   }
   .sec-02 {
     .container {
+      position: relative;
       .bg_sec {
         width: 100%;
+      }
+      .txt_02_01 {
+        width: 728px;
+        position: absolute;
+        top: 80px;
+        .p-center;
+      }
+      .txt_02_02 {
+        width: 100%;
+        position: absolute;
+        top: 928px;
+        .p-center;
+      }
+      .txt_02_03 {
+        width: 728px;
+        position: absolute;
+        top: 1945px;
+        .p-center;
+      }
+      .txt_02_04 {
+        width: 100%;
+        position: absolute;
+        top: 2160px;
+        .p-center;
       }
     }
   }
 }
-
+/* contact
+-----------------------------------------------------------------*/
 #contact {
   .sec-01 {
     background: url('../img/contact/bg_01.jpg');
     background-size: cover;
+    position: relative;
+    .txt_01_01 {
+      width: 600px;
+      position: absolute;
+      top: 180px;
+      .p-center;
+    }
   }
   .sec-02 {
+    .container {
+      .txt_02_01 {
+        width: 192px;
+        margin-top: 84px;
+      }
+      .undeline {
+        bottom: -58px;
+      }
+      .contact_detail {
+        height: 440px;
+        background: url('../img/contact/detail_bg.png');
+        background-size: cover;
+        position: relative;
+        text-align: center;
+        .avatar {
+          width: 190px;
+          margin: 46px auto 18px;
+        }
+        .txt_02_02 {
+          width: 420px;
+        }
+      }
+    }
+  }
+  .sec-03 {
     .container {
       .bg_sec {
         width: 100%;
@@ -251,20 +382,144 @@ section {
   }
 }
 
+/* shops
+-----------------------------------------------------------------*/
 #shops {
   .sec-01 {
     background: url('../img/shops/bg_01.jpg');
     background-size: cover;
+    .container {
+      height: 100%;
+      position: relative;
+      .txt_01_01 {
+        width: 700px;
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+      }
+    }
   }
   .sec-02 {
     .container {
-      .bg_sec {
+      // .bg_sec {
+      //   width: 100%;
+      // }
+      .txt_02_01 {
+        width: 192px;
+        margin-top: 84px;
+      }
+      .shops_img {
         width: 100%;
+        margin-top: 32px;
+      }
+    }
+  }
+  .sec-03 {
+    .container {
+      height: 4152px;
+      background: url('../img/shops/bg_sec.jpg');
+      background-size: 100%;
+      position: relative;
+      .txt_02_02 {
+        width: 460px;
+        position: absolute;
+        top: 416px;
+        left: 4px;
+      }
+      .txt_03_01 {
+        width: 188px;
+        position: absolute;
+        top: 1254px;
+        .p-center;
+      }
+      .txt_03_02 {
+        width: 260px;
+        position: absolute;
+        top: 1540px;
+        left: 75px;
+      }
+      .txt_03_03 {
+        width: 568px;
+        position: absolute;
+        top: 1668px;
+        left: 75px;
+      }
+      .txt_03_04 {
+        width: 650px;
+        position: absolute;
+        top: 2292px;
+        left: 58px;
+      }
+      .txt_03_05 {
+        width: 574px;
+        position: absolute;
+        top: 2820px;
+        left: 75px;
+      }
+      .txt_03_06 {
+        width: 560px;
+        position: absolute;
+        top: 2950px;
+        left: 75px;
+      }
+      .txt_03_07 {
+        width: 390px;
+        position: absolute;
+        top: 3630px;
+        .p-center;
+      }
+      .btn_01 {
+        top: 18px;
+        left: 1040px;
+      }
+      .btn_02 {
+        top: 1152px;
+        left: 1040px;
+      }
+      .btn_03 {
+        top: 1896px;
+        left: 75px;
+      }
+      .btn_04 {
+        top: 2454px;
+        left: 75px;
+      }
+      .img_group {
+        width: 100%;
+        height: 240px;
+        position: absolute;
+      }
+      .zx-btn-arr {
+        margin: 78px 22px;
+        cursor: pointer;
+      }
+      .img_gp_01 {
+        top: 3215px;
+        .btn_05 {
+          top: 1152px;
+          left: 1040px;
+        }
+        .btn_06 {
+          top: 1152px;
+          left: 1040px;
+        }
+      }
+      .img_gp_02 {
+        top: 3720px;
+        .btn_07 {
+          top: 1152px;
+          left: 1040px;
+        }
+        .btn_08 {
+          top: 1152px;
+          left: 1040px;
+        }
       }
     }
   }
 }
-
+/* footer
+-----------------------------------------------------------------*/
 footer {
   height: 180px;
   background: #000;
