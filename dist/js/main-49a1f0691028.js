@@ -13,28 +13,28 @@ var imgUrl = [];
 switch (curPage) {
   case "about.html":
     imgUrl = [
-      './img/about/bg_01.jpg',
-      './img/about/txt_01_01.png',
-      './img/about/pic_01_01.png',
+      './img/about/bg_01-e4570a4052fc.jpg',
+      './img/about/txt_01_01-c1b1808117f9.png',
+      './img/about/pic_01_01-811ecab2c02e.png',
     ];
     break;
   case "shops.html":
     imgUrl = [
-      './img/shops/bg_01.jpg',
-      './img/shops/txt_01_01.png',
+      './img/shops/bg_01-8c27b6a44bdc.jpg',
+      './img/shops/txt_01_01-8b3f9a083479.png',
     ];
     break;
   case "contact.html":
     imgUrl = [
-      './img/contact/bg_01.jpg',
-      './img/contact/txt_01_01.png',
+      './img/contact/bg_01-9dbbe785e68a.jpg',
+      './img/contact/txt_01_01-4c0ff03ca22e.png',
     ];
     break;
   default:
     imgUrl = [
-      './img/home/bg_01.jpg',
-      './img/home/txt_01_01.png',
-      './img/home/pic_01.png',
+      './img/home/bg_01-358ab3d0ed83.jpg',
+      './img/home/txt_01_01-462e2b810ee5.png',
+      './img/home/pic_01-9e2f41d3dbf4.png',
     ];
     break;
 }

@@ -16,29 +16,9 @@
   <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./lib/css/animate.min.css">
-
 </head>
 
 <body>
-  <style type="text/css">
-    #browser-hint {
-      display: none;
-      text-align: center;
-      width: 100%;
-      height: 400px;
-      margin-top: 80px;
-    }
-
-    #browser-hint a {
-      text-decoration: none;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    #browser-hint img {
-      border: none;
-    }
-  </style>
   <div id="browser-hint">
     <div class="link-img">
       <a href="http://www.google.cn/chrome/browser/">
@@ -54,6 +34,20 @@
         please use the Chrome or Firefox browser to open the website!</p>
     </div>
   </div>
+
+  <div id="page-loading">
+    <div class="loading">
+      <h2>页面加载中，请稍候！</h2>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
   <div id="page-wrap">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -66,7 +60,7 @@
               <a class="nav-link" href="./index.html">首页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./abort.html">关于仲旋</a>
+              <a class="nav-link" href="./about.html">关于仲旋</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./shops.html">门店展示</a>
@@ -86,7 +80,7 @@
         <div class="container">
           <img class="txt_01_01 wow fadeInDown" src="./img/home/txt_01_01.png">
           <img class="txt_01_02 wow fadeInDown" src="./img/home/txt_01-02.png">
-          <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png">
+          <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./about.html')">
           <img class="pic_01_01 wow fadeInUp" src="./img/home/pic_01.png">
         </div>
       </section>
@@ -95,18 +89,18 @@
           <div class="sub-sec bg-hover">
             <img class="bg-hover-img" src="./img/home/pic_02_01.jpg">
             <img class="txt_02_01 wow fadeInDown" src="./img/home/txt_02_01.png">
-            <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png">
+            <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./shops.html', 'daily')">
           </div>
           <div class="sub-sec-rt">
             <div class="sub-sec bg-hover">
               <img class="bg-hover-img" src="./img/home/pic_02_02.jpg">
               <img class="txt_02_02 wow fadeInDown" src="./img/home/txt_02_02.png">
-              <img class="zx-btn wow fadeInDown" src="./img/home/btn_02.png">
+              <img class="zx-btn wow fadeInDown" src="./img/home/btn_02.png" onclick="goTo('./shops.html', 'camp')">
             </div>
             <div class="sub-sec bg-hover">
               <img class="bg-hover-img" src="./img/home/pic_02_03.jpg">
               <img class="txt_02_03 wow fadeInDown" src="./img/home/txt_02_03.png">
-              <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png">
+              <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./shops.html', 'summer')">
             </div>
           </div>
         </div>
@@ -115,14 +109,14 @@
         <div class="container pic_03 text-center">
           <img class="pic_03_01" src="./img/home/sec_03.jpg">
           <img class="txt_03_01 wow fadeInDown" src="./img/home/txt_03_01.png">
-          <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png">
+          <img class="zx-btn wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./index.html')">
         </div>
       </section>
       <section class="sec-04">
         <div class="container sec-04-wp">
           <img class="pic_04_01" src="./img/home/sec_04.jpg">
-          <img class="zx-btn btn-01 wow fadeInDown" src="./img/home/btn_01.png">
-          <img class="zx-btn btn-02 wow fadeInDown" src="./img/home/btn_01.png">
+          <img class="zx-btn btn-01 wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./shops.html')">
+          <img class="zx-btn btn-02 wow fadeInDown" src="./img/home/btn_01.png" onclick="goTo('./contact.html')">
         </div>
       </section>
     </div>
@@ -155,6 +149,7 @@
   </script>
   <script type="text/javascript" src="./lib/js/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/js/funclib.min.js"></script>
   <script type="text/javascript" src="./lib/js/wow.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>

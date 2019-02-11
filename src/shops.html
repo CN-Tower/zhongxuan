@@ -19,25 +19,6 @@
 </head>
 
 <body>
-  <style type="text/css">
-    #browser-hint {
-      display: none;
-      text-align: center;
-      width: 100%;
-      height: 400px;
-      margin-top: 80px;
-    }
-
-    #browser-hint a {
-      text-decoration: none;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    #browser-hint img {
-      border: none;
-    }
-  </style>
   <div id="browser-hint">
     <div class="link-img">
       <a href="http://www.google.cn/chrome/browser/">
@@ -53,6 +34,20 @@
         please use the Chrome or Firefox browser to open the website!</p>
     </div>
   </div>
+
+  <div id="page-loading">
+    <div class="loading">
+      <h2>页面加载中，请稍候！</h2>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
   <div id="page-wrap">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -65,7 +60,7 @@
               <a class="nav-link" href="./index.html">首页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./abort.html">关于仲旋</a>
+              <a class="nav-link" href="./about.html">关于仲旋</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="./shops.html">门店展示</a>
@@ -118,6 +113,11 @@
       </section>
       <section class="sec-03">
         <div class="container">
+
+          <em id="daily"></em>
+          <em id="camp"></em>
+          <em id="summer"></em>
+
           <img class="txt_02_02 wow fadeInDown" src="./img/shops/txt_02_02.png">
 
           <img class="txt_03_01 wow fadeInDown" src="./img/shops/txt_03_01.png">
@@ -128,8 +128,8 @@
           <img class="txt_03_06 wow fadeInDown" src="./img/shops/txt_03_06.png">
           <img class="txt_03_07 wow fadeInDown" src="./img/shops/txt_03_07.png">
 
-          <img class="zx-btn btn_01 wow fadeInDown" src="./img/shops/contact_btn.png">
-          <img class="zx-btn btn_02 wow fadeInDown" src="./img/shops/contact_btn.png">
+          <img class="zx-btn btn_01 wow fadeInDown" src="./img/shops/contact_btn.png" onclick="goTo('./contact.html')">
+          <img class="zx-btn btn_02 wow fadeInDown" src="./img/shops/contact_btn.png" onclick="goTo('./contact.html')">
           <img class="zx-btn btn_03 wow fadeInDown" src="./img/shops/buy_btn.png">
           <img class="zx-btn btn_04 wow fadeInDown" src="./img/shops/kno_btn.png">
 
@@ -191,6 +191,7 @@
   </script>
   <script type="text/javascript" src="./lib/js/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/js/funclib.min.js"></script>
   <script type="text/javascript" src="./lib/js/wow.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>

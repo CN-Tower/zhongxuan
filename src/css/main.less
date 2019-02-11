@@ -105,6 +105,100 @@ section {
     min-width: 1140px !important;
   }
 }
+
+#browser-hint {
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+  }
+  img {
+    border: none;
+  }
+}
+
+#page-loading {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+  padding: 20%;
+  h2 {
+    color: #ccc;
+    margin: 0;
+    padding-left: 24px;
+  }
+  .loading {
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1em;
+      height: 1em;
+      margin: .5em;
+      background: #007DB6;
+      border-radius: .5em;
+      -webkit-animation: loading 1s infinite alternate;
+              animation: loading 1s infinite alternate;
+      &:nth-of-type(2) {
+        background: #008FB2;
+        -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+      }
+      &:nth-of-type(3) {
+        background: #009B9E;
+        -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s;
+      }
+      &:nth-of-type(4) {
+        background: #00A77D;
+        -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+      }
+      &:nth-of-type(5) {
+        background: #00B247;
+        -webkit-animation-delay: 0.8s;
+                animation-delay: 0.8s;
+      }
+      &:nth-of-type(6) {
+        background: #5AB027;
+        -webkit-animation-delay: 1.0s;
+                animation-delay: 1.0s;
+      }
+      &:nth-of-type(7) {
+        background: #A0B61E;
+        -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s;
+      }
+    }
+  }
+  @-webkit-keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+#page-wrap {
+  display: none;
+}
 /* header
 -----------------------------------------------------------------*/
 header {
@@ -279,11 +373,11 @@ header {
     }
   }
 }
-/* abort
+/* about
 -----------------------------------------------------------------*/
-#abort {
+#about {
   .sec-01 {
-    background: url('../img/abort/bg_01.jpg');
+    background: url('../img/about/bg_01.jpg');
     background-size: cover;
     .container {
       height: 100%;
@@ -359,9 +453,10 @@ header {
         bottom: -58px;
       }
       .contact_detail {
-        height: 440px;
-        background: url('../img/contact/detail_bg.png');
-        background-size: cover;
+        height: 476px;
+        margin-top: 40px;
+        background: url(../img/contact/detail_bg-defc8aec0997.png) no-repeat;
+        background-size: 100%;
         position: relative;
         text-align: center;
         .avatar {
@@ -453,6 +548,18 @@ header {
       background: url('../img/shops/bg_sec.jpg');
       background-size: 100%;
       position: relative;
+      #daily {
+        position: absolute;
+        top: 2046px;
+      }
+      #camp {
+        position: absolute;
+        top: 2688px;
+      }
+      #summer {
+        position: absolute;
+        top: 1395px;
+      }
       .txt_02_02 {
         width: 460px;
         position: absolute;

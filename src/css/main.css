@@ -76,6 +76,95 @@ section {
     min-width: 1140px !important;
   }
 }
+#browser-hint {
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+}
+#browser-hint a {
+  text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+}
+#browser-hint img {
+  border: none;
+}
+#page-loading {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+  padding: 20%;
+}
+#page-loading h2 {
+  color: #ccc;
+  margin: 0;
+  padding-left: 24px;
+}
+#page-loading .loading span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  margin: 0.5em;
+  background: #007DB6;
+  border-radius: 0.5em;
+  -webkit-animation: loading 1s infinite alternate;
+  animation: loading 1s infinite alternate;
+}
+#page-loading .loading span:nth-of-type(2) {
+  background: #008FB2;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+#page-loading .loading span:nth-of-type(3) {
+  background: #009B9E;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+#page-loading .loading span:nth-of-type(4) {
+  background: #00A77D;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+#page-loading .loading span:nth-of-type(5) {
+  background: #00B247;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+#page-loading .loading span:nth-of-type(6) {
+  background: #5AB027;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#page-loading .loading span:nth-of-type(7) {
+  background: #A0B61E;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#page-wrap {
+  display: none;
+}
 /* header
 -----------------------------------------------------------------*/
 header {
@@ -244,35 +333,35 @@ header .navbar .navbar-nav .nav-item.active a {
   top: 810px;
   left: 828px;
 }
-/* abort
+/* about
 -----------------------------------------------------------------*/
-#abort .sec-01 {
-  background: url('../img/abort/bg_01.jpg');
+#about .sec-01 {
+  background: url('../img/about/bg_01.jpg');
   background-size: cover;
 }
-#abort .sec-01 .container {
+#about .sec-01 .container {
   height: 100%;
   position: relative;
 }
-#abort .sec-01 .container .txt_01_01 {
+#about .sec-01 .container .txt_01_01 {
   width: 580px;
   position: absolute;
   top: 220px;
   left: 0;
 }
-#abort .sec-01 .container .pic_01_01 {
+#about .sec-01 .container .pic_01_01 {
   width: 700px;
   position: absolute;
   bottom: 0px;
   left: 420px;
 }
-#abort .sec-02 .container {
+#about .sec-02 .container {
   position: relative;
 }
-#abort .sec-02 .container .bg_sec {
+#about .sec-02 .container .bg_sec {
   width: 100%;
 }
-#abort .sec-02 .container .txt_02_01 {
+#about .sec-02 .container .txt_02_01 {
   width: 728px;
   position: absolute;
   top: 80px;
@@ -280,7 +369,7 @@ header .navbar .navbar-nav .nav-item.active a {
   right: 0;
   margin: auto;
 }
-#abort .sec-02 .container .txt_02_02 {
+#about .sec-02 .container .txt_02_02 {
   width: 100%;
   position: absolute;
   top: 928px;
@@ -288,7 +377,7 @@ header .navbar .navbar-nav .nav-item.active a {
   right: 0;
   margin: auto;
 }
-#abort .sec-02 .container .txt_02_03 {
+#about .sec-02 .container .txt_02_03 {
   width: 728px;
   position: absolute;
   top: 1945px;
@@ -296,7 +385,7 @@ header .navbar .navbar-nav .nav-item.active a {
   right: 0;
   margin: auto;
 }
-#abort .sec-02 .container .txt_02_04 {
+#about .sec-02 .container .txt_02_04 {
   width: 100%;
   position: absolute;
   top: 2160px;
@@ -327,9 +416,10 @@ header .navbar .navbar-nav .nav-item.active a {
   bottom: -58px;
 }
 #contact .sec-02 .container .contact_detail {
-  height: 440px;
-  background: url('../img/contact/detail_bg.png');
-  background-size: cover;
+  height: 476px;
+  margin-top: 40px;
+  background: url(../img/contact/detail_bg-defc8aec0997.png) no-repeat;
+  background-size: 100%;
   position: relative;
   text-align: center;
 }
@@ -404,6 +494,18 @@ header .navbar .navbar-nav .nav-item.active a {
   background: url('../img/shops/bg_sec.jpg');
   background-size: 100%;
   position: relative;
+}
+#shops .sec-03 .container #daily {
+  position: absolute;
+  top: 2046px;
+}
+#shops .sec-03 .container #camp {
+  position: absolute;
+  top: 2688px;
+}
+#shops .sec-03 .container #summer {
+  position: absolute;
+  top: 1395px;
 }
 #shops .sec-03 .container .txt_02_02 {
   width: 460px;

@@ -19,25 +19,6 @@
 </head>
 
 <body>
-  <style type="text/css">
-    #browser-hint {
-      display: none;
-      text-align: center;
-      width: 100%;
-      height: 400px;
-      margin-top: 80px;
-    }
-
-    #browser-hint a {
-      text-decoration: none;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    #browser-hint img {
-      border: none;
-    }
-  </style>
   <div id="browser-hint">
     <div class="link-img">
       <a href="http://www.google.cn/chrome/browser/">
@@ -53,6 +34,20 @@
         please use the Chrome or Firefox browser to open the website!</p>
     </div>
   </div>
+
+  <div id="page-loading">
+    <div class="loading">
+      <h2>页面加载中，请稍候！</h2>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
   <div id="page-wrap">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -65,7 +60,7 @@
               <a class="nav-link" href="./index.html">首页</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="./abort.html">关于仲旋</a>
+              <a class="nav-link" href="./about.html">关于仲旋</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./shops.html">门店展示</a>
@@ -81,20 +76,20 @@
       </nav>
     </header>
 
-    <div id="abort" class="sections">
+    <div id="about" class="sections">
       <section class="sec-01">
         <div class="container">
-          <img class="txt_01_01 wow fadeInDown" src="./img/abort/txt_01_01.png">
-          <img class="pic_01_01 wow fadeInUp" src="./img/abort/pic_01_01.png">
+          <img class="txt_01_01 wow fadeInDown" src="./img/about/txt_01_01.png">
+          <img class="pic_01_01 wow fadeInUp" src="./img/about/pic_01_01.png">
         </div>
       </section>
       <section class="sec-02">
         <div class="container">
-          <img class="bg_sec" src="./img/abort/bg_sec.jpg">
-          <img class="txt_02_01 wow fadeInDown" src="./img/abort/txt_02_01.png">
-          <img class="txt_02_02 wow fadeInDown" src="./img/abort/txt_02_02.png">
-          <img class="txt_02_03 wow fadeInDown" src="./img/abort/txt_02_03.png">
-          <img class="txt_02_04 wow fadeInDown" src="./img/abort/txt_02_04.png">
+          <img class="bg_sec" src="./img/about/bg_sec.jpg">
+          <img class="txt_02_01 wow fadeInDown" src="./img/about/txt_02_01.png">
+          <img class="txt_02_02 wow fadeInDown" src="./img/about/txt_02_02.png">
+          <img class="txt_02_03 wow fadeInDown" src="./img/about/txt_02_03.png">
+          <img class="txt_02_04 wow fadeInDown" src="./img/about/txt_02_04.png">
         </div>
       </section>
     </div>
@@ -128,6 +123,7 @@
   </script>
   <script type="text/javascript" src="./lib/js/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/js/funclib.min.js"></script>
   <script type="text/javascript" src="./lib/js/wow.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>

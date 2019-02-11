@@ -8,7 +8,8 @@ const gulp = require('gulp'),
   less = require('gulp-less'),
   imagemin = require('gulp-imagemin'),
   LessAutoprefix = require('less-plugin-autoprefix'),
-  path = require('path');
+  path = require('path'),
+  glob = require('glob');
 
 const autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
 
@@ -24,7 +25,7 @@ gulp.task('check', ['openDist']);
 
 // npm run build
 gulp.task('build', done => runSequence(
-  'clean', 'less', 'revSrc', 'copyLib', 'logInfo', 'openDist', done
+  'clean', 'less', 'revSrc', 'revJsImg', 'copyLib', 'logInfo', 'openDist', done
 ));
 
 /**
@@ -62,17 +63,17 @@ gulp.task('clean', () => {
 
 gulp.task('imgMin', function () {
   gulp.src('./src/img/**')
-      .pipe(imagemin({
-          optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-          progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-          interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-          multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
-      }))
-      .pipe(gulp.dest('./src/img'));
+    .pipe(imagemin({
+      optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
+      progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+      interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+      multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
+    }))
+    .pipe(gulp.dest('./src/img'));
 });
 
 gulp.task('revSrc', () => {
-  const excludeFiles = [/favicon.ico/mg, /index.html/mg, /abort.html/mg, /contact.html/mg, /shops.html/mg];
+  const excludeFiles = [/favicon.ico/mg, /index.html/mg, /about.html/mg, /contact.html/mg, /shops.html/mg];
   return gulp.src(['./src/**', '!./src/lib/**', '!./src/**/*.less'])
     .pipe(revAll.revision({
       dontRenameFile: excludeFiles,
@@ -87,6 +88,33 @@ gulp.task('revSrc', () => {
     .pipe(gulp.dest("./dist"))
     .pipe(rev.manifest())
     .pipe(gulp.dest('./rev'));;
+});
+
+gulp.task('revJsImg', () => {
+  const files = glob.sync('./dist/img/**').map(url => url.replace('./dist', '.'));
+  const mainJsPath = fn.find(glob.sync('./dist/js/*.js'), pt => pt.includes('main'));
+  let mainJs = fn.rd(mainJsPath);
+  const imgs = [
+    './img/about/bg_01.jpg',
+    './img/about/txt_01_01.png',
+    './img/about/pic_01_01.png',
+    './img/shops/bg_01.jpg',
+    './img/shops/txt_01_01.png',
+    './img/contact/bg_01.jpg',
+    './img/contact/txt_01_01.png',
+    './img/home/bg_01.jpg',
+    './img/home/txt_01_01.png',
+    './img/home/pic_01.png',
+  ]
+  const imgBase = imgs.map(img => img.replace(/(.jpg)|(.png)/mig, ''));
+  files.forEach(f => {
+    imgBase.forEach((base, i) => {
+      if (f.includes(base)) {
+        mainJs = mainJs.replace(imgs[i], f);
+      }
+    });
+  });
+  fn.wt(mainJsPath, mainJs);
 });
 
 gulp.task('copyLib', () => {
