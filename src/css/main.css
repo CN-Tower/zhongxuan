@@ -478,23 +478,26 @@ header .navbar .navbar-nav .nav-item.active a {
   height: 240px;
   position: absolute;
   padding: 0 84px;
-  overflow: hidden;
 }
 #shops .sec-03 .container .zx-btn-arr {
-  margin: 78px -58px;
+  margin: 78px -52px;
   cursor: pointer;
 }
-#shops .sec-03 .container .imgs_wp {
+#shops .sec-03 .container .imgs_win {
+  height: 100%;
+  overflow: hidden;
+}
+#shops .sec-03 .container .imgs_win .imgs_wp {
   width: 1298px;
   padding: 0;
   list-style: none;
 }
-#shops .sec-03 .container .imgs_wp li {
+#shops .sec-03 .container .imgs_win .imgs_wp li {
   float: left;
   width: 318px;
   margin-right: 6px;
 }
-#shops .sec-03 .container .imgs_wp li img {
+#shops .sec-03 .container .imgs_win .imgs_wp li img {
   width: 100%;
 }
 #shops .sec-03 .container .img_gp_01 {

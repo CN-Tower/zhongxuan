@@ -340,8 +340,40 @@ header .navbar .navbar-nav .nav-item.active a {
 #contact .sec-02 .container .contact_detail .txt_02_02 {
   width: 420px;
 }
-#contact .sec-03 .container .bg_sec {
+#contact .sec-03 .container {
+  height: 1014px;
+  background: url('../img/contact/bg_sec-98234212e497.jpg');
+  background-size: 100%;
+  position: relative;
+}
+#contact .sec-03 .container .qr_code {
   width: 100%;
+  height: 390px;
+  position: absolute;
+  top: 522px;
+}
+#contact .sec-03 .container .qr_code .qr_code_img {
+  width: 290px;
+  margin-left: 80px;
+}
+#contact .sec-03 .container .qr_code .qr_code_dsc {
+  width: 290px;
+  position: absolute;
+  top: 310px;
+  left: 80px;
+}
+#contact .sec-03 .container .qr_code .media-body .c_item {
+  margin-left: 100px;
+  margin-top: 60px;
+}
+#contact .sec-03 .container .qr_code .media-body .c_phone {
+  width: 500px;
+}
+#contact .sec-03 .container .qr_code .media-body .c_email {
+  width: 567px;
+}
+#contact .sec-03 .container .qr_code .media-body .c_tel {
+  width: 400px;
 }
 /* shops
 -----------------------------------------------------------------*/
@@ -445,10 +477,28 @@ header .navbar .navbar-nav .nav-item.active a {
   width: 100%;
   height: 240px;
   position: absolute;
+  padding: 0 84px;
 }
 #shops .sec-03 .container .zx-btn-arr {
-  margin: 78px 22px;
+  margin: 78px -52px;
   cursor: pointer;
+}
+#shops .sec-03 .container .imgs_win {
+  height: 100%;
+  overflow: hidden;
+}
+#shops .sec-03 .container .imgs_win .imgs_wp {
+  width: 1298px;
+  padding: 0;
+  list-style: none;
+}
+#shops .sec-03 .container .imgs_win .imgs_wp li {
+  float: left;
+  width: 318px;
+  margin-right: 6px;
+}
+#shops .sec-03 .container .imgs_win .imgs_wp li img {
+  width: 100%;
 }
 #shops .sec-03 .container .img_gp_01 {
   top: 3215px;
