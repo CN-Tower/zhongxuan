@@ -38,6 +38,9 @@ html, body {
 
 section {
   min-height: 400px;
+  &.sec-01 {
+    border-bottom: 1px solid @blue;
+  }
 }
 
 .page-wrap {
@@ -52,15 +55,19 @@ section {
   }
 }
 
+.white-border {
+  // border: 1px solid @white;
+}
+
 .p-center {
   left: 0;
   right: 0;
   margin: auto;
 }
 
-.branchs_nav_wp {
+.branches_nav_wp {
   margin-top: 38px;
-  .branchs_nav {
+  .branches_nav {
     list-style: none;
     padding: 0;
     display: flex;
@@ -73,6 +80,9 @@ section {
       cursor: pointer;
       .menu_txt {
         height: 22px;
+        &.txt_2 {
+          display: none;
+        }
       }
       .undeline {
         width: 90%;
@@ -81,8 +91,29 @@ section {
         bottom: -18px;
         display: none;
       }
-      &.active .undeline {
-        display: block;
+      &:hover {
+        .menu_txt {
+          &.txt_1 {
+            display: none;
+          }
+          &.txt_2 {
+            display: block;
+          }
+        }
+      }
+      &.active {
+        .menu_txt {
+          height: 22px;
+          &.txt_1 {
+            display: none;
+          }
+          &.txt_2 {
+            display: block;
+          }
+        }
+        .undeline {
+          display: block;
+        }
       }
     }
   }
@@ -211,34 +242,88 @@ header {
   background: rgba(0, 0, 0, .3);
   .navbar {
     padding-bottom: 0;
-    .navbar-brand {
-      height: 88px;
-      margin: 0;
-      padding: 0;
-      margin-top: -12px;
-      img {
-        height: 100%;
-        width: 170px;
-      }
-    }
-    .navbar-nav {
-      margin-left: 80px;
-      padding-top: 34px;
-      .nav-item {
-        margin-right: 40px;
-        a {
-          color: #fff !important;
-          font-weight: 600;
-        }
-        &.active a {
-          color: @primary !important;
+    .container {
+      position: relative;
+      .navbar-brand {
+        height: 88px;
+        margin: 0;
+        padding: 0;
+        margin-top: -12px;
+        img {
+          height: 100%;
+          width: 170px;
         }
       }
-    }
-    @media (min-width: 576px) {
-      .navbar-nav {
-        flex-direction: row!important;
-        margin-top: 0!important;
+      ul.navbar-nav {
+        margin-left: 80px;
+        padding-top: 34px;
+        li.nav-item {
+          width: 100px;
+          margin-right: 30px;
+          &:first-child {
+            width: 60px;
+          }
+          a {
+            color: #fff !important;
+            &:hover {
+              font-weight: 600;
+              color: @blue !important;
+            }
+          }
+          &.active a {
+            font-weight: 600;
+            color: @primary !important;
+          }
+        }
+      }
+      .global-search {
+        width: 40px;
+        height: 30px;
+        border-radius: 15px;
+        background: transparent;
+        position: absolute;
+        left: 900px;
+        top: 42px;
+        transition: 1s all;
+        input.search-input {
+          outline: none;
+          border: none;
+          height: 26px;
+          position: absolute;
+          top: 2px;
+          left: 16px;
+          background: transparent;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+        img.search-icon {
+          width: 22px;
+          position: absolute;
+          top: 4px;
+          right: 10px;
+          &.search2 {
+            cursor: pointer;
+            display: none;
+          }
+        }
+        &:hover {
+          width: 220px;
+          background: @white;
+          img.search-icon.search2 {
+            display: block;
+          }
+          img.search-icon.search1 {
+            display: none;
+          }
+        }
+      }
+      @media (min-width: 576px) {
+        .navbar-nav {
+          flex-direction: row!important;
+          margin-top: 0!important;
+        }
       }
     }
   }
@@ -340,6 +425,7 @@ header {
   }
   .sec-03 {
     .pic_03{
+      height: 502px;
       position: relative;
       .pic_03_01 {
         width: 100%;
@@ -403,7 +489,7 @@ header {
         width: 100%;
       }
       .txt_02_01 {
-        width: 728px;
+        width: 680px;
         position: absolute;
         top: 80px;
         .p-center;
@@ -411,7 +497,7 @@ header {
       .txt_02_02 {
         width: 100%;
         position: absolute;
-        top: 928px;
+        top: 946px;
         .p-center;
       }
       .txt_02_03 {
@@ -423,7 +509,7 @@ header {
       .txt_02_04 {
         width: 100%;
         position: absolute;
-        top: 2160px;
+        top: 2190px;
         .p-center;
       }
     }
@@ -450,12 +536,12 @@ header {
         margin-top: 84px;
       }
       .undeline {
-        bottom: -58px;
+        bottom: -18px;
       }
       .contact_detail {
         height: 476px;
         margin-top: 40px;
-        background: url(../img/contact/detail_bg-defc8aec0997.png) no-repeat;
+        background: url(../img/contact/detail_bg.png) no-repeat;
         background-size: 100%;
         position: relative;
         text-align: center;
@@ -485,24 +571,27 @@ header {
           margin-left: 80px;
         }
         .qr_code_dsc {
-          width: 290px;
+          width: 250px;
           position: absolute;
           top: 310px;
-          left: 80px;
+          left: 100px;
         }
         .media-body {
           .c_item {
             margin-left: 100px;
             margin-top: 60px;
+            &:first-child {
+              margin-top: 36px;
+            }
           }
           .c_phone {
-            width: 500px;
+            width: 450px
           }
           .c_email {
-            width: 567px;
+            width: 511px;
           }
           .c_tel {
-            width: 400px;
+            width: 384px;
           }
         }
       }
@@ -522,8 +611,9 @@ header {
       .txt_01_01 {
         width: 700px;
         position: absolute;
-        right: 0;
-        bottom: 150px;
+        .p-center;
+        top: 0;
+        bottom: 0;
       }
     }
   }
@@ -685,8 +775,8 @@ footer {
   overflow: hidden;
   color: @gray;
   hr {
-    height: 3px;
-    background: #188dca;
+    height: 1px;
+    background: @blue;
   }
   div.clearfix {
     .footer-menu {

@@ -1,7 +1,7 @@
 var urlStr = location.href;
 var patts = [/index\.html/, /about\.html/, /shops\.html/, /contact\.html/];
 var curPage = "";
-for (var i in patts) {
+for (var i =0; i < patts.length; i ++) {
   var matchs = patts[i].exec(urlStr);
   if (matchs) {
     curPage = matchs[0];
@@ -67,22 +67,29 @@ if (!pages || !fn.contains(pages, curPage)) {
   onImgesLoaded();
 }
 
-
 function onImgesLoaded() {
 
   $pageWrap.css('display', 'block');
   $loading.css('display', 'none');
-
   var $win = $(window);
-  $('.sec-01').css('height', $win.height());
-
-  new WOW().init();
+  var winH = $win.height();
+  var winW = $win.width();
+  var $seachIpt = $('.global-search input.search-input');
+  $('.sec-01').css('height', winH);
+  if (winH > winW) {
+    $('html, body').css('width', '1140px');
+  }
+  $('.global-search').hover(function() {
+    $seachIpt.focus();
+  }, function() {
+    $seachIpt.blur();
+  });
 
   $(".bg-hover").mouseenter(function (e) {
     $(this).children("img.bg-hover-img").stop().animate({
       width: "110%",
       height: "110%",
-      marginTop: "-5%",
+      marginTop: "-4%",
       marginLeft: "-5%"
     }, "easy-in-out");
   }).mouseleave(function (e) {
@@ -94,13 +101,16 @@ function onImgesLoaded() {
     }, "easy-in-out");
   });
 
-  var $barnchsNavItems = $('.branchs_nav').children()
-  $barnchsNavItems.each(function (i) {
+  var $branchNav = $('.branches_nav li');
+  $branchNav.each(function (i) {
+    $(this).find('.undeline').width($(this).find('.menu_txt:nth-child(1)').width())
     $(this).click(function () {
-      $barnchsNavItems.removeClass('active');
+      $branchNav.removeClass('active');
       $(this).addClass('active');
     });
   });
+
+  new WOW().init();
 };
 
 function goTo(url, ancho) {
